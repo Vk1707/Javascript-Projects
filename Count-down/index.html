@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/image/favicon.ico" type="image/x-icon">
+    <title>Count-Down</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="overlay">
+            <div id="open" class="title">Countdown App!</div>
+            <div id="end-date" class="title"></div>
+            <div class="calender">
+                <div class="calender-input">
+                    <label for="" class="title" >Choose A date For Count-Down</label><BR>
+                    <input type="datetime-local" id="datePicker">
+                    <button class="submit-btn" onclick="clock()">Start Countdown</button>
+
+                </div>
+            </div>
+            <div class="title" id="complete">
+                Remaining Time : 
+            </div>
+            <div id="div-col" class="col">
+                <div>
+                    <input class="val"  type="text" readonly value ="0:00">  <br>
+                    <label for="">Days</label>
+                </div>
+                <div>
+                    <input class="val"  type="text" readonly value ="0:00">  <br>
+                    <label for="">Hours</label>
+                </div>
+                <div>
+                    <input class="val"  type="text" readonly value ="0:00">  <br>
+                    <label for="">Minute</label>
+                </div>
+                <div>
+                    <input class="val"  type="text" readonly value ="0:00" id="sec">  <br>
+                    <label for="">Second</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
