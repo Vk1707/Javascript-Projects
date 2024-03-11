@@ -21,7 +21,7 @@ const clock = () => {
   }
 
   // set interval
-  const valId = setInterval(() => {
+  const valId = setInterval( () => {
     const nows = new Date();
     const ends = inputDate;
 
@@ -53,10 +53,14 @@ const clock = () => {
     //If Countdown will complete
     if (ends <= nows) {
       clearInterval(valId);
-      inputs[1].value = `0`;
-      inputs[2].value = `0`;
-      inputs[3].value = `0`;
-      inputs[4].value = `0`;
+      console.log("Interval is Clear");
+      
+      inputs.forEach(
+        (input) =>{
+          if (input.value == -1)
+           return input.value = "0" ;
+          }
+      )
       document.getElementById("end-date").innerHTML = "";
       document.getElementById("complete").innerHTML = "Countdown is Over";
       document.getElementById("complete").style.color = 'red';
